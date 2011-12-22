@@ -1,0 +1,61 @@
+<project name="Module build" default="deploy" basedir=".">
+
+    <target name="init" description="Build initialization">
+        <property file="build.properties"/>
+
+        <path id="libs">
+            <fileset dir="${module.lib.dir}">
+                <include name="**/*.jar"/>
+            </fileset>
+
+            <fileset dir="${module.compile-time-lib.dir}">
+                <include name="**/*.jar"/>
+            </fileset>
+        </path>
+    </target>
+
+
+    <target name="clean" depends="init">
+        <delete dir="${build.dir}"/>
+        <delete dir="${module.web.dir}/WEB-INF/classes"/>
+        <delete dir="${module.web.dir}/WEB-INF/lib"/>
+    </target>
+
+
+    <target name="deploy" depends="clean">
+        <mkdir dir="${module.build.dir}"/>
+
+        <javac srcdir="${module.src.dir}"
+               destdir="${module.build.dir}"
+               debug="${compiler.debug}"
+               optimize="${compiler.optimize}"
+               deprecation="${compiler.deprecation}"
+               encoding="${compiler.encoding}">
+            <classpath refid="libs"/>
+        </javac>
+
+        <copy todir="${module.build.dir}">
+            <fileset dir="${module.src.dir}">
+                <include name="**/*"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+
+        <mkdir dir="${module.web.dir}/WEB-INF/classes"/>
+        <copy todir="${module.web.dir}/WEB-INF/classes">
+            <fileset dir="${module.build.dir}"/>
+        </copy>
+
+        <mkdir dir="${module.web.dir}/WEB-INF/lib"/>
+        <copy todir="${module.web.dir}/WEB-INF/lib">
+            <fileset dir="${module.lib.dir}"/>
+        </copy>
+
+        <jar jarfile="${module.dist.dir}/${module.name}">
+            <fileset dir="${module.web.dir}"/>
+        </jar>
+    </target>
+
+    <target name="all" depends="deploy"/>
+</project>
+

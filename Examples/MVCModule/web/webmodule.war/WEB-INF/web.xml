@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+    <servlet>
+        <servlet-name>NotesServlet</servlet-name>
+        <servlet-class>ru.ksu.mvc.controller.NotesServlet</servlet-class>
+        <init-param>
+            <param-name>driver</param-name>
+            <param-value>org.h2.Driver</param-value>
+        </init-param>
+        <init-param>
+            <param-name>url</param-name>
+            <param-value>jdbc:h2:c:/tmp/testdb</param-value>
+        </init-param>
+        <init-param>
+            <param-name>user</param-name>
+            <param-value>sa</param-value>
+        </init-param>
+        <init-param>
+            <param-name>pass</param-name>
+            <param-value></param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NotesServlet</servlet-name>
+        <url-pattern>/servlet</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>/WEB-INF/jsp/index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
+
+
+
