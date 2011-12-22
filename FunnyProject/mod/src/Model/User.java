@@ -2,10 +2,10 @@ package Model;
 
 /**
  * Created by IntelliJ IDEA.
- * User: Aisylu
+ * User: loool
  * Date: 20.12.11
- * Time: 9:00
+ * Time: 19:33
  * To change this template use File | Settings | File Templates.
  */
-public class DB {
+public class User {
 }
