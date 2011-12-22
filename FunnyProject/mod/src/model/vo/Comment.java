@@ -1,11 +1,11 @@
-package Model;
+package model.vo;
 
 /**
  * Created by IntelliJ IDEA.
- * User: loool
+ * model.vo.User: loool
  * Date: 20.12.11
  * Time: 19:33
  * To change this template use File | Settings | File Templates.
  */
-public class Picture {
+public class Comment {
 }
