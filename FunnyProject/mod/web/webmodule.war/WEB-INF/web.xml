@@ -17,11 +17,11 @@
     <-->
 
     <servlet>
-        <servlet-name>FunServlet</servlet-name>
+        <servlet-name>Servlet</servlet-name>
         <servlet-class>controller.Servlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>FunServlet</servlet-name>
+        <servlet-name>Servlet</servlet-name>
         <url-pattern>/servlet</url-pattern>
     </servlet-mapping>
 

@@ -5,8 +5,8 @@
 		<style type="text/css">
 
 		H1 {
-		color: black; 
-		font-family: Arial; 
+		color: black;
+		font-family: Arial;
 		font-size: 150%;
 		font-weight: bold;
 		}
@@ -42,7 +42,7 @@
 					</tr>
 					<tr height="50">
 						<td><p>Password</p></td>
-						<td><input type="text" size=30 name="pass"></td>
+						<td><input type="password" size=30 name="pass"></td>
 					</tr>
 					<tr height="50">
 						<td></td>
@@ -51,7 +51,7 @@
 						</td>
 					</tr>
 				</table>
-				
+
 			</form>
 		</div>
 	</body>
