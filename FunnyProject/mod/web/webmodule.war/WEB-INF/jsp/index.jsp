@@ -30,7 +30,7 @@
 	</head>
 	<body>
 		<div class="pos">
-			<form name="loginform" method="post" action="loginaction.jsp">
+			<form name="loginform" method="post" action="">
 				<table align="center" width="300" border="0">
 					<tr height="50">
 						<td></td>
