@@ -12,36 +12,43 @@ public class User {
     private String login;
     private String pass;
 
-    public User(long id, String login, String pass)
+    public User()
+    {}
+
+    public User(long id1, String login1, String pass1)
     {
-        this.id = id;
-        this.login = login;
-        this.pass = pass;
+        this.id = id1;
+        this.login = login1;
+        this.pass = pass1;
+
     }
+
 
     public long  getId()
     {
         return id;
     }
 
-    public void setId(long id)
+    public void setId(long id1)
     {
-        this.id = id;
+        this.id = id1;
     }
     public String getLogin()
     {
         return login;
     }
-    public void setLogin(String login)
+    public void setLogin(String login1)
     {
-        this.login = login;
+        this.login = login1;
     }
-    public String getPass ()
+    public String getPass()
     {
         return pass;
     }
-    public void  setPass(String pass)
+    public void setPass(String pass1)
     {
-        this.pass = pass;
+        this.pass = pass1;
     }
+
+
 }

@@ -1,5 +1,10 @@
 package model.dao;
 
+import model.vo.Comment;
+import model.vo.User;
+
+import java.sql.SQLException;
+
 /**
  * Created by IntelliJ IDEA.
  * model.vo.User: loool
@@ -8,11 +13,12 @@ package model.dao;
  * To change this template use File | Settings | File Templates.
  */
 public interface IFunnyPic {
-    public  void  registration (String login, String pass);
-    public  void  authorisation(String login, String pass);
-    public  void  addComent(int userid, String comm);
-    public  void addPic();
-    public  void miniPic();
-    public  void  showPic(int picid);
+    public User registration(String login, String pass) throws ClassNotFoundException, SQLException;
+    public User authorisation(String login, String pass) throws ClassNotFoundException, SQLException;
+    public void addComent(long picid, String comm, long userid) throws ClassNotFoundException, SQLException;
+    public  void addPic(Byte picture, long userid);
+    public  void showMiniPic() throws ClassNotFoundException, SQLException;
+    public  void  showPic(long picid) throws ClassNotFoundException, SQLException;
+    public void  showComm(long picid) throws ClassNotFoundException, SQLException;
 
 }

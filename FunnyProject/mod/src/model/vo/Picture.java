@@ -11,11 +11,13 @@ public class Picture {
    private long id;
     private  String name;
     private  String namemini;
-    public Picture(long id, String login, String pass)
+    private long userid;
+    public Picture(long id1, String name1, String namemini1, long userid1)
     {
-        this.id = id;
-        this.name = login;
-        this.namemini= pass;
+        this.id = id1;
+        this.name = name1;
+        this.namemini= namemini1;
+        this.userid = userid1;
     }
 
     public long  getId()
@@ -23,24 +25,34 @@ public class Picture {
         return id;
     }
 
-    public void setId(long id)
+    public void setId(long id1)
     {
-        this.id = id;
+        this.id = id1;
     }
     public String getName()
     {
         return name;
     }
-    public void setName(String name)
+    public void setName(String name1)
     {
-        this.name = name;
+        this.name = name1;
     }
     public String getNamemini ()
     {
         return namemini;
     }
-    public void  setNamemini(String namemini)
+    public void  setNamemini(String namemini1)
     {
-        this.namemini = namemini;
+        this.namemini = namemini1;
+    }
+
+    public long  getUserid()
+    {
+        return userid;
+    }
+
+    public void setUserid(long userid1)
+    {
+        this.userid = userid1;
     }
 }
